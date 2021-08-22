@@ -1,0 +1,33 @@
+header{
+    width: 90%;
+    margin: auto;
+}
+
+#year{
+    background-color: blue;
+    height: 100px;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+main{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#main-calendar{
+    width: 70%;
+    height: 500px;
+    background-color: burlywood;
+    border-bottom-left-radius: 10px;
+}
+
+#day-details{
+    width: 30%;
+    height: 500px;
+    background-color: cadetblue;
+    border-bottom-right-radius: 10px;
+}
