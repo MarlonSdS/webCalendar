@@ -9,6 +9,9 @@ header{
     width: 100%;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 main{
@@ -30,4 +33,37 @@ main{
     height: 500px;
     background-color: cadetblue;
     border-bottom-right-radius: 10px;
+}
+
+h1{
+    color: white;
+}
+
+.seta{
+    height: 70px;
+    width: 10%;
+    color: white;
+}
+
+#stDir{
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 0%;
+    font-size: 70px;
+}
+
+#stEsq{
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 0%;
+    font-size: 70px;
+}
+
+#ano{
+    font-size: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
 }

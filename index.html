@@ -5,14 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js" ></script>
     <title>Calendar</title>
 </head>
 <body>
     <header>
         <div id="year">
-            <h1></h1>
+            <button id="stEsq" onclick="mesAnterior()">&#9668</button>
+            <div id="ano"></div> 
+            <button id="stDir" onclick="mesSeguinte()">&#9658</button>
         </div>
+        <script>document.addEventListener(onload, construirHeader())</script>
+        
     </header>
     <main>
         <div id="main-calendar">
