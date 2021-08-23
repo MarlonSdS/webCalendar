@@ -24,7 +24,7 @@ main{
 #main-calendar{
     width: 70%;
     height: 500px;
-    background-color: burlywood;
+    background-color: #F4fcff;
     border-bottom-left-radius: 10px;
 }
 
@@ -66,4 +66,29 @@ h1{
     color: white;
     display: flex;
     align-items: center;
+}
+
+table{
+    width: 100%;
+    
+}
+
+
+
+tr{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+td{
+    height: 95px;
+    width: 100%;
+    border: 1px darkblue solid;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+td:hover{
+    background-color: #C8eeff;
 }

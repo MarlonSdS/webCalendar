@@ -55,38 +55,37 @@ let mesNowStr = getMes(mesNow)
 //changes to the previous month
 function mesAnterior(){
     let data = new Date();
-   
-    if(mesNowStr == getDate.month){
-       console.log(data.getMonth() - 1)
-        getDate.month = getMes(mesNow - 1)
-       
-        console.log(getDate.month) 
-    }else{
+    getDate.month = getMes(mesNow - 1)
+    mesNow = mesNow - 1;
+    console.log(mesNow)
+    console.log(getDate.month)
+    if(mesNow <= 0){
+        mesNow = 12;
+        console.log(mesNow)
+    console.log(getDate.month)
         
-        if(mesNow < 0){
-            mesNow = 12;
-        }else{
-            mesNow = mesNow - 1;
-        }
-        getDate.month = getMes(mesNow - 1)
     }
-    
+    if(mesNow == 11){
+        getDate.year = getDate.year - 1;
+    }
    construirHeader()
 }
 //changes to the next month
 function mesSeguinte(){
     let data = new Date();
-   
-    if(mesNowStr == getDate.month){
-       console.log(data.getMonth() + 1)
-        getDate.month = getMes(mesNow + 1)
-       
-        console.log(getDate.month) 
-    }else{
-        mesNow = mesNow + 1;
-        getDate.month = getMes(mesNow + 1)
+    getDate.month = getMes(mesNow + 1)
+    mesNow = mesNow + 1;
+    console.log(mesNow)
+    console.log(getDate.month)
+    if(mesNow >= 11){
+        mesNow = -1;
+        console.log(mesNow)
+    console.log(getDate.month)
+        
     }
-    
+    if(mesNow == 0){
+        getDate.year = getDate.year + 1;
+    }
    construirHeader()
 }
 //create the words in the header, like the month name and the number of the year
