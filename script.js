@@ -69,6 +69,7 @@ function mesAnterior(){
         getDate.year = getDate.year - 1;
     }
    construirHeader()
+   gerarDias()
 }
 //changes to the next month
 function mesSeguinte(){
@@ -87,6 +88,7 @@ function mesSeguinte(){
         getDate.year = getDate.year + 1;
     }
    construirHeader()
+   gerarDias()
 }
 //create the words in the header, like the month name and the number of the year
 function construirHeader(){
@@ -94,4 +96,46 @@ function construirHeader(){
     
     var b = getDate.month + ", " + getDate.year
     a.innerHTML = b
+}
+
+function gerarDias(){
+    let c = document.getElementById('table')
+    c.innerHTML = ""
+    let mesLength = 31;
+    if(mesNow == 12){
+        mesNow = 0
+    }
+    if(getDate.month == "February"){
+        mesLength = 29
+    }else if(getDate.month == "January"){
+        mesLength = 32
+    }else if(getDate.month == "March"){
+        mesLength = 32
+    }else if(getDate.month == "May"){
+        mesLength = 32
+    }else if(getDate.month == "July"){
+        mesLength = 32
+    }else if(getDate.month == "August"){
+        mesLength = 32
+    }else if(getDate.month == "October"){
+        mesLength = 32
+    }else if(getDate.month == "December"){
+       mesLength = 32
+    }else{
+       mesLength = 31
+    }
+    console.log(mesNow)
+    console.log(mesLength)
+    for (let index = 1; index < mesLength; index++) {
+        let c = document.getElementById('table')
+
+        let d = document.createElement('td')
+        let e = document.createTextNode(index)
+        d.innerHTML = ""
+        d.appendChild(e)
+        let f = "td"+index
+        d.setAttribute('id', f)
+
+        c.appendChild(d)
+    }
 }
