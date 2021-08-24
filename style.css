@@ -97,3 +97,9 @@ td{
 td:hover{
     background-color: #C8eeff;
 }
+
+.diaAtual{
+    color: blue;
+    border: blue solid 1px;
+}
+

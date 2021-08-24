@@ -135,6 +135,9 @@ function gerarDias(){
         d.appendChild(e)
         let f = "td"+index
         d.setAttribute('id', f)
+        if(mesNow == data.getMonth() && index == data.getDate()){
+            d.setAttribute('class', 'diaAtual')
+        }
 
         c.appendChild(d)
     }
