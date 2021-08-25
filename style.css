@@ -105,18 +105,18 @@ td:hover{
 
 @media (min-height: 700px) {
     #main-calendar{
-        height: 850px;
+        height: 800px;
     }
     #day-details{
-        height: 850px;
+        height: 800px;
     }
     #year{
-        height: 160px;
+        height: 140px;
     }
     td{
-        height: 165px;
+        height: 155px;
         width: 13.9%;
-        font-size: 50px;
+        font-size: 44px;
     }
 }
 
