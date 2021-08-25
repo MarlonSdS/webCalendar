@@ -103,3 +103,20 @@ td:hover{
     border: blue solid 1px;
 }
 
+@media (min-height: 700px) {
+    #main-calendar{
+        height: 850px;
+    }
+    #day-details{
+        height: 850px;
+    }
+    #year{
+        height: 160px;
+    }
+    td{
+        height: 165px;
+        width: 13.9%;
+        font-size: 50px;
+    }
+}
+
