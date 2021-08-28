@@ -22,13 +22,20 @@
         <div id="main-calendar">
             <table>
                 <tbody id="table">
-
+                    <script>document.addEventListener(onclick, exibirEvento())</script>
                 </tbody>
             </table>
         </div>
         <script>document.addEventListener(onload, gerarDias())</script>
         <div id="day-details">
-
+            <div>
+                <h1 id="h1">Não há nenhum evento marcado para hoje</h1>
+                <h2 id="h2">Clique em adicionar evento para criar um evento para este dia</h2>
+            </div>
+            <div class="btn">
+               <button id="btn">Adicionar evento</button> 
+            </div>
+            
         </div>
     </main>
 </body>

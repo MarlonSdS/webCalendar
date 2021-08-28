@@ -69,6 +69,7 @@ function mesAnterior(){
         getDate.year = getDate.year - 1;
     }
    construirHeader()
+   esconderEvento()
    gerarDias()
 }
 //changes to the next month
@@ -88,6 +89,7 @@ function mesSeguinte(){
         getDate.year = getDate.year + 1;
     }
    construirHeader()
+   esconderEvento()
    gerarDias()
 }
 //create the words in the header, like the month name and the number of the year
@@ -98,6 +100,7 @@ function construirHeader(){
     a.innerHTML = b
 }
 
+//to generate all the td's with the number of the days
 function gerarDias(){
     let c = document.getElementById('table')
     c.innerHTML = ""
@@ -135,10 +138,33 @@ function gerarDias(){
         d.appendChild(e)
         let f = "td"+index
         d.setAttribute('id', f)
+        d.setAttribute('onclick','exibirEvento('+index+')')
         if(mesNow == data.getMonth() && index == data.getDate()){
             d.setAttribute('class', 'diaAtual')
         }
 
         c.appendChild(d)
+        //c = document.write('<script>document.addEventListener(onclick, exibirEvento('+f+'))</script>')
+        
     }
+}
+
+//to show the lateral options 
+function exibirEvento(dia){
+    let a = document.getElementById('h1')
+    let b = document.getElementById('h2')
+    let c = document.getElementById('btn')
+    console.log(dia)
+    a.style.display = "block"
+    b.style.display = "block"
+    c.style.display = "block"
+}
+//to hide the lateral options
+function esconderEvento(){
+    let a = document.getElementById('h1')
+    let b = document.getElementById('h2')
+    let c = document.getElementById('btn')
+    a.style.display = "none"
+    b.style.display = "none"
+    c.style.display = "none"
 }
