@@ -28,12 +28,19 @@
         </div>
         <script>document.addEventListener(onload, gerarDias())</script>
         <div id="day-details">
-            <div>
-                <h1 id="h1">Não há nenhum evento marcado para hoje</h1>
-                <h2 id="h2">Clique em adicionar evento para criar um evento para este dia</h2>
-            </div>
+            <form action="manager.php" method="GET">
+                <div>
+                    <h1 id="h1">Não há nenhum evento marcado para hoje</h1>
+                    <input class="input" type="text" name="title" placeholder="Titulo">
+                    <h2 id="h2">Clique em adicionar evento para criar um evento para este dia</h2>
+                    <textarea name="description" id="" cols="25" rows="10" class="input" placeholder="Descrição"></textarea>
+                </div>
+                <input class="input" type="submit" id="btnEnviar">
+                
+            </form>
             <div class="btn">
-               <button id="btn">Adicionar evento</button> 
+                <button id="btn" onclick="btnAddClick()">Adicionar evento</button> 
+                
             </div>
             
         </div>

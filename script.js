@@ -158,6 +158,16 @@ function exibirEvento(dia){
     a.style.display = "block"
     b.style.display = "block"
     c.style.display = "block"
+    let d = document.getElementsByClassName('input')
+    let i1 = d[0]
+    let i2 = d[1]
+    let i3 = d[2]
+
+    console.log(i1, i2, i3)
+
+    i1.style.display = "none"
+    i2.style.display = "none"
+    i3.style.display = "none"
 }
 //to hide the lateral options
 function esconderEvento(){
@@ -167,4 +177,34 @@ function esconderEvento(){
     a.style.display = "none"
     b.style.display = "none"
     c.style.display = "none"
+    let d = document.getElementsByClassName('input')
+    let i1 = d[0]
+    let i2 = d[1]
+    let i3 = d[2]
+
+    console.log(i1, i2, i3)
+
+    i1.style.display = "none"
+    i2.style.display = "none"
+    i3.style.display = "none"
+}
+
+function btnAddClick(){
+    let a1 = document.getElementById('h1')
+    let a2 = document.getElementById('h2')
+    let a3 = document.getElementById('btn')
+
+    let a = document.getElementsByClassName('input')
+    let i1 = a[0]
+    let i2 = a[1]
+    let i3 = a[2]
+
+    console.log(i1, i2, i3)
+
+    i1.style.display = "block"
+    a1.style.display = "none"
+    i2.style.display = "block"
+    a2.style.display = "none"
+    i3.style.display = "block"
+    a3.style.display = "none"
 }

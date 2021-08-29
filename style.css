@@ -160,3 +160,44 @@ td:hover{
     bottom: 0%;
 }
 
+form{
+    width: 100%;
+    height: 100%;
+    background-color:#DEF7F4;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input{
+    display: none;
+    width: 96%;
+    height: 35px;
+    margin: auto;
+    background-color: #E9EFF1;
+    margin-top: 3%;
+    border: solid 2px #CEE7EF;
+    border-radius: 6px;
+    color: rgb(155, 155, 155);
+}
+
+textarea{
+    height: 120px !important;
+}
+
+#btnEnviar{
+    width: 80%;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: #00C0FF;
+    color: honeydew;
+    border: none;
+    border-radius: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3%;
+    display: none;
+}
