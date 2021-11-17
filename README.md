@@ -1,2 +1,2 @@
 # webCalendar
-A basic calendar made with basic web tecnologies like HTML, CSS and JS. It's for pratice web programing.
+A calendar with the schedule feature. Uses MongoDB to save the data and FullCalendar Library.
