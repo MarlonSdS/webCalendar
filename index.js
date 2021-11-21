@@ -40,4 +40,9 @@ app.get("/geteventos", async (req, res) =>{
     res.json(evento)
 })
 
+app.get("/event/:id/:title", async (req, res) =>{
+    res.json({id: req.params.id,
+              title: req.params.title  })
+})
+
 app.listen(8080, () => {console.log("Servidor rodando")})
