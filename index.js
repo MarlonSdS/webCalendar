@@ -1,4 +1,3 @@
-const e = require('express')
 const express = require('express')
 const app = express()
 const bp = require('body-parser')
@@ -40,9 +39,15 @@ app.get("/geteventos", async (req, res) =>{
     res.json(evento)
 })
 
-app.get("/event/:id/:title", async (req, res) =>{
-    res.json({id: req.params.id,
-              title: req.params.title  })
+app.get("/event/:id", async (req, res) =>{
+    var ev = await eventService.getById(req.params.id)
+    res.render('event',{event: ev})
+})
+
+app.post("/finish", async (req, res) =>{
+    var id = req.body.id
+    var result = await eventService.finish(id)
+    res.redirect('/')
 })
 
 app.listen(8080, () => {console.log("Servidor rodando")})

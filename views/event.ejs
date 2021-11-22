@@ -1,0 +1,21 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= event.name %></title>
+</head>
+<body>
+    <h1>Evento: <%= event.name %> </h1>
+    <hr>
+    <h4>Descrição: <%= event.description %></h4>
+    <h4>Data: <%= event.date %></h4>
+    <h4>Hora: <%= event.time %></h4>
+    <hr>
+    <form action="/finish" method="post">
+        <input type="hidden" id="id" name="id" value="<%= event._id %>">
+        <button>Apagar Evento</button>
+    </form>
+    
+</body>
+</html>

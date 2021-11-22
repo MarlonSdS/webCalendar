@@ -40,6 +40,28 @@ class EventService{
         }
     }
 
+    async getById(id){
+        try{
+           var ev = await Event.findOne({'_id': id}) 
+           return ev
+        }catch(err){
+            console.log(err)
+        }
+        
+
+    }
+
+    async finish(id){
+        try{
+           await Event.findByIdAndUpdate(id, {finished: true}) 
+           return true
+        }catch(err){
+            console.log(err)
+            return false
+        }
+        
+    }
+
 }
 
 module.exports = new EventService();
